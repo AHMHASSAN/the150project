@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="c" width="192" height="192"></canvas>
+<script>
+const c=document.getElementById('c'),ctx=c.getContext('2d');
+ctx.fillStyle='#0a0a0f';ctx.fillRect(0,0,192,192);
+ctx.fillStyle='#f59e0b';
+ctx.font='bold 110px Courier New';ctx.textAlign='center';ctx.textBaseline='middle';
+ctx.fillText('$',96,96);
+ctx.strokeStyle='#1e3a5f';ctx.lineWidth=6;ctx.strokeRect(3,3,186,186);
+const a=document.createElement('a');
+a.download='icon.png';a.href=c.toDataURL('image/png');
+document.body.appendChild(a);a.click();
+document.body.innerHTML='<p style="font-family:monospace;padding:20px;color:#22c55e">icon.png downloaded. Close this tab.</p>';
+</script>
+</body>
+</html>
